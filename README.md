@@ -13,11 +13,8 @@ Run `bun install` and `bun run check`. For a change that should ship, run `bun c
 
 ## Release
 
-Merging a changeset to `main` opens or updates the **Version Packages** PR. Merging that PR publishes the new versions to npm and creates GitHub releases. A push to `main` with no pending changesets publishes any current versions that are not on npm, including the initial `0.1.0`.
+Merging a changeset to `main` opens or updates the **Version Packages** PR. Merging that PR publishes the new versions to npm and creates GitHub releases.
 
-1. In the public GitHub repo, go to **Settings → Actions → General → Workflow permissions** and enable **Allow GitHub Actions to create and approve pull requests**.
-2. In **Settings → Environments**, create `npm`. Under **Deployment branches and tags**, choose **Selected branches and tags** and add `main` as a branch rule.
-3. Before pushing the Release workflow to `main`, create an npm granular access token with write access to the `@jonlinkens` scope and **Bypass 2FA**. Add it as the `NPM_TOKEN` secret in the `npm` environment. Trusted publishing is not yet available for these packages. Alternatively, run `bun pm pack` in each package and `npm publish <tarball> --access public`, shared first, then create the initial GitHub releases yourself.
-4. After all three packages exist on npm, open each package’s **Settings → Trusted Publisher** and choose **GitHub Actions**. Set the owner to `jonlinkens`, repository to `opencode-slack`, workflow filename to `release.yml`, and environment to `npm`. Allow direct `npm publish`. Delete the `NPM_TOKEN` environment secret and revoke the token once all three trusted publishers are configured.
+The Release workflow publishes with npm trusted publishing, so it needs no token. Each package trusts `jonlinkens/opencode-slack`, workflow `release.yml`, environment `npm`. The `npm` environment only runs on `main`.
 
 Run `bun run release --dry-run` to see which versions would be published without packing, publishing, or tagging.

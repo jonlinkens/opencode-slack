@@ -44,7 +44,19 @@ function publish(directory: string) {
   const tarball = join(destination, "release.tgz");
   try {
     run("bun", ["pm", "pack", "--filename", tarball], directory);
-    run("npm", ["publish", tarball, "--registry", registry, "--access", "public", "--provenance"], root);
+    run(
+      "npm",
+      [
+        "publish",
+        tarball,
+        "--registry",
+        registry,
+        "--access",
+        "public",
+        ...(process.env.GITHUB_ACTIONS === "true" ? ["--provenance"] : []),
+      ],
+      root,
+    );
   } finally {
     rmSync(destination, { recursive: true, force: true });
   }
