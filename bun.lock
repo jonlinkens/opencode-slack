@@ -19,14 +19,14 @@
     },
     "packages/shared": {
       "name": "@jonlinkens/opencode-slack-shared",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": {
         "zod": "^4.6.7",
       },
     },
     "packages/slack-agent": {
       "name": "@jonlinkens/opencode-slack-agent",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": {
         "@jonlinkens/opencode-slack-shared": "workspace:*",
         "zod": "^4.6.7",
@@ -37,7 +37,7 @@
     },
     "packages/slack-feedback": {
       "name": "@jonlinkens/opencode-slack-feedback",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": {
         "@jonlinkens/opencode-slack-shared": "workspace:*",
         "zod": "^4.6.7",

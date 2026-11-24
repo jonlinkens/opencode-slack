@@ -1,6 +1,6 @@
 {
   "name": "@jonlinkens/opencode-slack-shared",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Slack and git helpers shared by @jonlinkens/opencode-slack-feedback and @jonlinkens/opencode-slack-agent.",
   "license": "MIT",
   "author": "Jon Linkens",
