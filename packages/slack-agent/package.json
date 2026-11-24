@@ -1,6 +1,6 @@
 {
   "name": "@jonlinkens/opencode-slack-agent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OpenCode plugin: mention @OpenCode in a Slack thread to start an OpenCode session on your Mac, opened in Rex.",
   "keywords": [
     "opencode",

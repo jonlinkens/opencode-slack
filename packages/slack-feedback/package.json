@@ -1,6 +1,6 @@
 {
   "name": "@jonlinkens/opencode-slack-feedback",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OpenCode plugin: a give_feedback tool that lets agents report friction to a Slack channel for you to triage.",
   "keywords": [
     "opencode",
