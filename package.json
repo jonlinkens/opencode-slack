@@ -2,6 +2,7 @@
   "name": "opencode-slack",
   "private": true,
   "type": "module",
+  "packageManager": "bun@1.4.4",
   "workspaces": [
     "packages/*"
   ],
@@ -11,15 +12,20 @@
     "format": "oxfmt",
     "lint": "oxlint",
     "check": "oxfmt --check && oxlint && tsc --noEmit && vitest run",
-    "release": "bun run check && bun publish --cwd packages/shared && bun publish --cwd packages/slack-feedback && bun publish --cwd packages/slack-agent"
+    "changeset": "changeset",
+    "version": "changeset version && bun install && oxfmt",
+    "release": "bun scripts/release.ts"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.31.1",
     "@opencode/plugin": "2.4.1",
     "@oxlint/plugins": "1.95.0",
     "@types/node": "^22.0.0",
     "oxfmt": "0.80.0",
     "oxlint": "1.95.0",
     "typescript": "^5.6.0",
-    "vitest": "^3.0.0"
+    "vitest": "^3.0.0",
+    "zod": "^4.6.7"
   }
 }

@@ -4,6 +4,15 @@
   "description": "Slack and git helpers shared by @jonlinkens/opencode-slack-feedback and @jonlinkens/opencode-slack-agent.",
   "license": "MIT",
   "author": "Jon Linkens",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonlinkens/opencode-slack.git",
+    "directory": "packages/shared"
+  },
+  "homepage": "https://github.com/jonlinkens/opencode-slack/tree/main/packages/shared",
+  "bugs": {
+    "url": "https://github.com/jonlinkens/opencode-slack/issues"
+  },
   "type": "module",
   "exports": {
     ".": "./src/index.ts"

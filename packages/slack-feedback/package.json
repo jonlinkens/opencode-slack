@@ -10,6 +10,15 @@
   ],
   "license": "MIT",
   "author": "Jon Linkens",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonlinkens/opencode-slack.git",
+    "directory": "packages/slack-feedback"
+  },
+  "homepage": "https://github.com/jonlinkens/opencode-slack/tree/main/packages/slack-feedback",
+  "bugs": {
+    "url": "https://github.com/jonlinkens/opencode-slack/issues"
+  },
   "type": "module",
   "exports": {
     ".": "./src/index.ts"

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.4/schema.json",
+  "baseBranch": "main",
+  "access": "public",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "jonlinkens/opencode-slack"
+    }
+  ],
+  "commit": false,
+  "ignore": [],
+  "fixed": [
+    [
+      "@jonlinkens/opencode-slack-shared",
+      "@jonlinkens/opencode-slack-feedback",
+      "@jonlinkens/opencode-slack-agent"
+    ]
+  ],
+  "linked": [],
+  "updateInternalDependencies": "patch"
+}
