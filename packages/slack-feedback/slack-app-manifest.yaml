@@ -1,0 +1,21 @@
+# Slack app for @jonlinkens/opencode-slack-feedback.
+# Create it at https://api.slack.com/apps → Create New App → From a manifest.
+display_information:
+  name: OpenCode
+  description: Posts friction reports from OpenCode agents.
+  background_color: "#0c0c0c"
+features:
+  bot_user:
+    display_name: OpenCode
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - channels:read
+      - groups:read
+      - users:read
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

@@ -1,0 +1,25 @@
+{
+  "name": "opencode-slack",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "check": "oxfmt --check && oxlint && tsc --noEmit && vitest run",
+    "release": "bun run check && bun publish --cwd packages/shared && bun publish --cwd packages/slack-feedback && bun publish --cwd packages/slack-agent"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.4.1",
+    "@oxlint/plugins": "1.95.0",
+    "@types/node": "^22.0.0",
+    "oxfmt": "0.80.0",
+    "oxlint": "1.95.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}

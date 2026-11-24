@@ -1,0 +1,35 @@
+{
+  "name": "@jonlinkens/opencode-slack-feedback",
+  "version": "0.1.0",
+  "description": "OpenCode plugin: a give_feedback tool that lets agents report friction to a Slack channel for you to triage.",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "slack",
+    "feedback"
+  ],
+  "license": "MIT",
+  "author": "Jon Linkens",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "!src/**/__tests__",
+    "slack-app-manifest.yaml"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "dependencies": {
+    "@jonlinkens/opencode-slack-shared": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

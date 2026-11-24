@@ -1,0 +1,24 @@
+{
+  "name": "@jonlinkens/opencode-slack-shared",
+  "version": "0.1.0",
+  "description": "Slack and git helpers shared by @jonlinkens/opencode-slack-feedback and @jonlinkens/opencode-slack-agent.",
+  "license": "MIT",
+  "author": "Jon Linkens",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "!src/**/__tests__"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
